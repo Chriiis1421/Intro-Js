@@ -37,3 +37,63 @@ console.log(funcionario.nome, funcionario.departamento.setor);
 console.log(typeof(funcionario));
 console.log(typeof(PI));
 console.log(typeof(nome));
+
+console.log(`Nome: ${nome}, Idade: ${idade}, Data Nasc: ${dtNascimento}`);
+
+// Comparação de dados entre variável, independente do tipo
+var x = 10;
+
+if(x == "10") {
+    console.log("É igual");
+} else {
+    console.log("Não é igual");
+}
+
+// Comparação entre dados e tipo
+var x = 10;
+
+if(x === "10") {
+    console.log("É igual");
+} else {
+    console.log("Não é igual");
+}
+
+// Operador condicional ternário
+console.log(x === 10 ? "é igual" : "Não é igual");
+
+for(i=0; i<9; i++) {
+    console.log(i );
+}
+
+// Iterar sobre objetos
+var categorias = {
+    eletronicos : "Eletrônicos",
+    moveis : "moveis",
+    telefonia : "Smartphones",
+    automotiva : "Automotivas",
+}
+
+for(let cat in categorias) {
+    console.log(`Categoria: ${categorias[cat]}`);
+}
+
+// Funções
+
+
+
+// Funções Expressas - função dentro de uma variável
+const impressao = function () {
+    console.log("Dentro da função");
+    for(let cat in categorias) {
+        console.log(`Categoria: ${categorias[cat]}`);
+    }
+}
+
+impressao();
+
+console.log(typeof(impressao));
+
+// Arrow Functions
+const numeroAleatorio = () => Math.random();
+
+console.log(numeroAleatorio());
